@@ -1,0 +1,58 @@
+﻿@model ParqueFerroviarioAlberto.Models.Vagon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vagon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.carga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carga)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idPatio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPatio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idTaller)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idTaller)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idTren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idTren)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idVagon }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ParqueFerroviarioAlberto.Models.Estacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.salida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.llegada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idEmpresa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.salida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.llegada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idEmpresa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idEstacion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idEstacion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idEstacion })
+        </td>
+    </tr>
+}
+
+</table>
